@@ -12,8 +12,6 @@ function BackToTop() {
         })
     },[])
 
-    console.log('backToTopBtn:', backToTopBtn);
-
     const scrollUp=()=>{
         window.scrollTo({
             top:0,

@@ -9,6 +9,8 @@ import BackToTop from './components/BackToTop';
 //pages
 import Home from './pages/Home';
 import Cart from './pages/Cart';
+import Admin from './pages/Admin';
+import ProductDetail from './pages/ProductDetail';
 
 
 function App() {
@@ -19,7 +21,6 @@ function App() {
     fetch('https://63f483a03f99f5855db14181.mockapi.io/api/v1/hdiehiu')
     .then(res => res.json())
     .then(products =>{
-      console.log('products:', products);
       setProducts(products);
     })
   },[])
@@ -45,6 +46,9 @@ function App() {
       <Routes>
         <Route path="*" element={<Home products={products} handleAddToCart={handleAddToCart}/>}/>
         <Route path="/cart" element={<Cart listCart={listCart} handleRemoveCart={hanldeRemoveCart}/>}/>
+        <Route path="/cart/:productId" element={<ProductDetail/>}/>
+        <Route path="/admin" element={<Admin />}/>
+
       </Routes>
 
 

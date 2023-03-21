@@ -1,6 +1,4 @@
 import React,{useState} from "react";
-
-
 import ListProduct from "../components/ListProduct";
 
 const TITLE_ALL ='All product list';
@@ -37,7 +35,7 @@ function Home({products, handleAddToCart}) {
         </div>
 
         <ListProduct typeRender={'PRODUCT'}
-                     handdleSubmit={handleAddToCart}
+                     handleSubmit={handleAddToCart}
                      products={productsToShow}
                      title={title}
         />

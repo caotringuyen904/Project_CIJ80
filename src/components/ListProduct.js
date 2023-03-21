@@ -9,7 +9,7 @@ function ListProduct({ products, title, handleSubmit, typeRender }) {
                     return (
                         <Product
                         key={product.id}
-                        // productId={product.id}
+                        productId={product.id}
                         productImg={product.productImg}
                         productTitle={product.productTitle}
                         productPrice={product.productPrice}
