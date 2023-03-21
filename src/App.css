@@ -1,38 +1,129 @@
-.App {
+html {
+  background-color: rgb(244, 244, 244);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li a{
+  float: right;
+  color: white;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo a:hover{
+  background-color: grey;
+  color: aqua;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li a:hover {
+  background-color: grey;
+  color: aqua;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.active-item{
+  color: aquamarine;
+}
+
+/* style the tab */
+.tab{
+  align-items: center;
+  text-align: center;
+  background-color: bisque;
+}
+.tab button {
+  background-color: inherit;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of button on hover */
+.tab button:hover{
+  background-color: #ddd;
+  font-weight: bold;
+  border-radius: 18px;
+}
+
+.active {
+  background-color: #ddd !important;
+  border-radius: 10px;
+  color:#fff;
+}
+
+/* style backToTop button */
+.btn-backToTop{
+  cursor: pointer;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  background-color: rgb(170, 170, 170);
+  border: none;
+  border-radius: 5px;
+}
+
+/* style render product list */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.product {
+  margin-bottom: 30px;
+  padding: 5px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: rgb(255,255,255);
+}
+
+.product-description {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.product-container p {
+  margin: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product img{
+  width: 300px;
+  transition: transform .1s;
+  border-radius: 10px;
+}
+
+.product img:hover{
+  transform: scale(1.1);
+}
+
+.product button {
+  background-color: bisque;
+  cursor: pointer;
+  border-radius: 10px ;
+  border-color: red;
+  margin-top: 5px;
+  transition: transform .2s;
+}
+
+.product button:hover{
+  background-color: bisque;
+  border-radius: 10px;
+  transform: scale(1.06);
+  font-weight: bold;
 }
