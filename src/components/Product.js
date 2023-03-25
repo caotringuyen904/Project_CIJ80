@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 function Product({ productImg, productId, productPrice, productTitle, onSubmit, type }) {
     return (<>
             <div className='product' style={{textAlign:"center"}}>
-                
                 <img src={productImg} alt=""></img>
                 <div className="product-description">
                     <p>{productTitle}</p>

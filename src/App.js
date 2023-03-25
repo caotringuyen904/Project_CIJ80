@@ -21,9 +21,12 @@ function App() {
     fetch('https://63f483a03f99f5855db14181.mockapi.io/api/v1/hdiehiu')
       .then(res => res.json())
       .then(products => {
+        console.log('products:', products);
         setProducts(products);
       })
   }, [])
+
+  console.log('products:', products);
 
 
   // func pages home
@@ -43,8 +46,10 @@ function App() {
     const tempProduct = {
       id: products.length +1,  
       productImg:
-                 data.type === 'MEN' ? '../images/NamTayNgan01.jpeg'
-                                     : '../images/DamNu.jpeg',
+      data.type === 'MEN' ? 'https://pt2000.com.vn/wp-content/uploads/2022/08/SMM-N713-0WH76-420K-2-500x500.jpg'
+                           : 'https://pt2000.com.vn/wp-content/uploads/2022/09/ADL-N230-0RT00-400K-500x500.jpg',
+                //  data.type === 'MEN' ? '../images/NamTayNgan01.jpeg'
+                //                      : '../images/DamNu.jpeg',
       productTitle: data.productTitle,
       productPrice: data.productPrice,
       type: data.type,
