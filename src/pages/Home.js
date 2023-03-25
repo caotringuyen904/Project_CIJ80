@@ -39,6 +39,7 @@ function Home({products, handleAddToCart}) {
                      products={productsToShow}
                      title={title}
         />
+
     </>);
 }
 

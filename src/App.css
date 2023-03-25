@@ -2,18 +2,20 @@ html {
   background-color: rgb(244, 244, 244);
 }
 
+
+
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 0 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+
 }
 
 li a{
-  float: right;
+  float: left;
   color: white;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -96,6 +98,8 @@ li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size:15px;
+  font-weight: bold;
 }
 
 .product-container p {
@@ -119,6 +123,8 @@ li a:hover {
   border-color: red;
   margin-top: 5px;
   transition: transform .2s;
+  justify-content: center;
+text-align: center;  align-items: center;
 }
 
 .product button:hover{
@@ -126,4 +132,14 @@ li a:hover {
   border-radius: 10px;
   transform: scale(1.06);
   font-weight: bold;
+}
+
+.list-unstyle{
+  display: flex;
+  justify-content: space-around;
+  padding:20px;
+  background-color: bisque;
+  color:#333;
+  font-weight: bold;
+
 }

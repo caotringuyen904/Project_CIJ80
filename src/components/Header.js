@@ -6,21 +6,21 @@ const activeClass =(params) =>(params.isActive ? "active-item" : "")
 
 function Header({cartNumber}) {
     return ( <>
-        <div className="header-container"> 
+        <div className="header-container">
             <ul>
-                <li className="logo" style={{float:"left"}}>
-                    <NavLink to="/home" className={activeClass}>NIKE</NavLink>
+                <li className="logo">
+                    <NavLink to="/home" className={activeClass}><h3>UNIQLO</h3></NavLink>
+                </li>
+                <li>
+                    <NavLink to ="/home" className={activeClass}>Home</NavLink>
                 </li>
                 <li>
                     <NavLink to ="/admin" className={activeClass}>Admin</NavLink>
                 </li>
-                <li>
+                <li style={{float:"right"}}>
                     <NavLink to="/cart" className={activeClass}>Cart
                         <Badge style={{marginLeft:5}} bg="secondary">{cartNumber}</Badge>
                     </NavLink>
-                </li>
-                 <li>
-                    <NavLink to ="/home" className={activeClass}>Home</NavLink>
                 </li>
             </ul>
         </div>

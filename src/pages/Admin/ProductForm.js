@@ -1,18 +1,19 @@
-import useInput from "../hooks/useInput";
+import useInput from "../../hooks/useInput";
 
-function Admin({handleAddProduct}) {
+function ProductForm({handleAddProduct}) {
     const inputTitle = useInput();
     const inputPrice = useInput();
     const inputType = useInput();
 
     const handleSubmit = (e) => {
-        e.prevetnDefault();
+        e.preventDefault();
 
-        const data={
+        const data = {
             productTitle: inputTitle.value,
             productPrice: inputPrice.value,
             type: inputType.value,
         }
+
         handleAddProduct(data);
         console.log('data:', data);
     }
@@ -53,4 +54,4 @@ function Admin({handleAddProduct}) {
     </>);
 }
 
-export default Admin;
+export default ProductForm;
