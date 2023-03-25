@@ -141,5 +141,36 @@ text-align: center;  align-items: center;
   background-color: bisque;
   color:#333;
   font-weight: bold;
+}
 
+form{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-form{
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: bisque;
+}
+
+.product-form > div{
+  width: 100%;
+  display: flex;
+  margin: 10px 0;
+}
+
+.product-form div label{
+  margin-right: 10px;
+  flex: 1;
+}
+
+.product-form div input{
+  flex: 5;
+}
+
+.type-select{
+  flex: 5;
 }
